@@ -1,9 +1,10 @@
 package org.aston;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
-        System.out.println(checkLeapYear(4));
+        matrixDiagonalChanger();
     }
 
     // Задание 1
@@ -81,5 +82,48 @@ public class Main {
     }
 
     // Задание 10
+    static void arrayDigitChange(){
+        int[] digits = {1,1,0,0,1,0,1,1,0,0};
+        for (int i=0; i < digits.length; i++){
+            if (digits[i] == 0){
+                digits[i] = 1;
+            } else {
+                digits[i] = 0;
+            }
+        }
+        System.out.println(Arrays.toString(digits));
+    }
 
+    // Задание 11
+    static void fillingArray(){
+        int[] numbers = new int[100];
+        for (int i=0; i < numbers.length; i++){
+            numbers[i] = i+1;
+        }
+        System.out.println(Arrays.toString(numbers));
+    }
+
+    //Задание 12
+    static void changeValueLesserThanSix(){
+        int[] numbers = {1,5,3,2,11,4,5,2,4,8,9,1};
+        for (int i=0; i < numbers.length; i++){
+            if (numbers[i]<6){
+                numbers[i] *= 2;
+            }
+        }
+        System.out.println(Arrays.toString(numbers));
+    }
+
+    // Задание 13
+    static void matrixDiagonalChanger(){
+        int[][] numbers = new int[10][10];
+        for (int r=0; r < numbers.length; r++) {
+            for (int c = 0; c < numbers[r].length; c++) {
+                if (numbers[r] == numbers[c]) {
+                    numbers[r][c] = 1;
+                }
+            }
+        }
+        System.out.println(Arrays.deepToString(numbers).replace("], ","],\n"));
+    }
 }
