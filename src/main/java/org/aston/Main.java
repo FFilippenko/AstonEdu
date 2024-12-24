@@ -3,6 +3,7 @@ package org.aston;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
+        System.out.println(checkLeapYear(4));
     }
 
     // Задание 1
@@ -62,4 +63,23 @@ public class Main {
     static boolean checkNumberSign(int a) {
         return a < 0;
     }
+
+    // Задание 8
+    static void printStringAsMuchAsRequested(String a, int b) {
+        for (int i = 0; i<b; i++){
+        System.out.println(a);
+        }
+    }
+
+    // Задание 9
+    static boolean checkLeapYear(int year) {
+        if (year%400 == 0){
+            return true;
+        } else if (year%100 == 0){
+            return false;
+        } else return year%4 == 0;
+    }
+
+    // Задание 10
+
 }
