@@ -4,7 +4,6 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
-        matrixDiagonalChanger();
     }
 
     // Задание 1
@@ -124,6 +123,24 @@ public class Main {
                 }
             }
         }
+        for (int rr = numbers.length-1; rr >= 0; rr--) {
+            for (int cc = 0; cc < numbers.length; cc++) {
+                if (rr + cc == numbers.length-1) {
+                    numbers[rr][cc] = 1;
+                }
+            }
+        }
         System.out.println(Arrays.deepToString(numbers).replace("], ","],\n"));
     }
+
+    // Задание 14
+    static int[] arrCreator (int len, int initialValue){
+        int[] arr = new int[len];
+        for (int i=0; i < arr.length; i++){
+            arr[i] = initialValue;
+        }
+        System.out.println(Arrays.toString(arr));
+        return arr;
+    }
 }
+
