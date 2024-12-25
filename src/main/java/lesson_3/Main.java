@@ -5,12 +5,12 @@ public class Main {
     }
 
     // Задание 1
-    public static void printThreeWords() {
+    static void printThreeWords() {
         System.out.println("Orange,\nBanana,\nApple");
     }
 
     // Задание 2
-    public static void checkSumSign() {
+    static void checkSumSign() {
         int a = 5;
         int b = -6;
         if (a + b > 0) {
@@ -21,7 +21,7 @@ public class Main {
     }
 
     // Задание 3
-    public static void printColor() {
+    static void printColor() {
         int value = 1000;
         if (value <= 0) {
             System.out.println("Красный");
