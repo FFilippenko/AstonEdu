@@ -1,4 +1,4 @@
-package org.aston;
+package lesson_3;
 import java.util.Arrays;
 
 public class Main {
