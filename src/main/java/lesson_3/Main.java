@@ -1,9 +1,7 @@
 package lesson_3;
-import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
     }
 
     // Задание 1
@@ -65,81 +63,69 @@ public class Main {
     }
 
     // Задание 8
-    static void printStringAsMuchAsRequested(String a, int b) {
-        for (int i = 0; i<b; i++){
-        System.out.println(a);
+    static void printString(String a, int b) {
+        for (int i = 0; i < b; i++) {
+            System.out.println(a);
         }
     }
 
     // Задание 9
     static boolean checkLeapYear(int year) {
-        if (year%400 == 0){
+        if (year % 400 == 0) {
             return true;
-        } else if (year%100 == 0){
+        } else if (year % 100 == 0) {
             return false;
-        } else return year%4 == 0;
+        } else return year % 4 == 0;
     }
 
     // Задание 10
-    static void arrayDigitChange(){
-        int[] digits = {1,1,0,0,1,0,1,1,0,0};
-        for (int i=0; i < digits.length; i++){
-            if (digits[i] == 0){
+    static void swapOneAndZero() {
+        int[] digits = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
+        for (int i = 0; i < digits.length; i++) {
+            if (digits[i] == 0) {
                 digits[i] = 1;
             } else {
                 digits[i] = 0;
             }
         }
-        System.out.println(Arrays.toString(digits));
     }
 
     // Задание 11
-    static void fillingArray(){
+    static void fillArray() {
         int[] numbers = new int[100];
-        for (int i=0; i < numbers.length; i++){
-            numbers[i] = i+1;
+        for (int i = 0; i < numbers.length; i++) {
+            numbers[i] = i + 1;
         }
-        System.out.println(Arrays.toString(numbers));
     }
 
     //Задание 12
-    static void changeValueLesserThanSix(){
-        int[] numbers = {1,5,3,2,11,4,5,2,4,8,9,1};
-        for (int i=0; i < numbers.length; i++){
-            if (numbers[i]<6){
+    static void multiplyValuesLessThanSix() {
+        int[] numbers = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] < 6) {
                 numbers[i] *= 2;
             }
         }
-        System.out.println(Arrays.toString(numbers));
     }
 
     // Задание 13
-    static void matrixDiagonalChanger(){
+    static void createArrayDiagonal() {
         int[][] numbers = new int[10][10];
-        for (int r=0; r < numbers.length; r++) {
-            for (int c = 0; c < numbers[r].length; c++) {
-                if (numbers[r] == numbers[c]) {
-                    numbers[r][c] = 1;
+        for (int i = 0; i < numbers.length; i++) {
+            for (int j = 0; j < numbers[i].length; j++) {
+                if (i == j || i + j == numbers.length - 1) {
+                    numbers[i][j] = 1;
                 }
             }
         }
-        for (int rr = numbers.length-1; rr >= 0; rr--) {
-            for (int cc = 0; cc < numbers.length; cc++) {
-                if (rr + cc == numbers.length-1) {
-                    numbers[rr][cc] = 1;
-                }
-            }
-        }
-        System.out.println(Arrays.deepToString(numbers).replace("], ","],\n"));
     }
 
     // Задание 14
-    static int[] arrCreator (int len, int initialValue){
+    static int[] createArray(int len, int initialValue) {
         int[] arr = new int[len];
-        for (int i=0; i < arr.length; i++){
+        for (int i = 0; i < arr.length; i++) {
             arr[i] = initialValue;
         }
-        System.out.println(Arrays.toString(arr));
         return arr;
     }
 }
