@@ -6,7 +6,7 @@ public class Cat extends Animal {
     static int counter;
 
     public Cat(String name, int age) {
-        super(name,age, 200, 0);
+        super(name, age, 200, 0);
         this.isHunger = true;
         this.bellyful = 0;
         counter++;
@@ -22,15 +22,15 @@ public class Cat extends Animal {
     }
 
     @Override
-    public void swim(int length){
+    public void swim(int length) {
         System.out.println("Котик " + name + " не умеет плавать(");
     }
 
-    public void printResult(){
+    public void printResult() {
         System.out.println("КОТ");
         System.out.println("Имя кота: " + name);
         System.out.println("Возраст кота: " + age);
-        if (isHunger){
+        if (isHunger) {
             System.out.println("Статус сытости: голоден");
         } else {
             System.out.println("Статус сытости: сыт");
