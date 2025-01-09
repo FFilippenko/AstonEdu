@@ -1,4 +1,4 @@
-package lesson_5_figures;
+package lesson_5;
 
 abstract class GeometricFigure implements Geometrical {
     String backgroundColor;
