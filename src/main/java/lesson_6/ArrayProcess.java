@@ -23,6 +23,5 @@ public class ArrayProcess {
             throw new MyArraySizeException("Ошибка: не соответствует размеру 4x4!");
         }
         return sum;
-
-    }
+   }
 }
