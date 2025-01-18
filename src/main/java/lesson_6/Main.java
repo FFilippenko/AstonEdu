@@ -43,7 +43,7 @@ public class Main {
                 null,
         };
 
-        String[][][] allArr = { // Массив, содержащий все предыдыдущие массивы
+        String[][][] allArr = {                         // Массив, содержащий все примеры
                 validArray,
                 arrayWithNonIntSymbol,
                 arrayWithLessLengthElem,
@@ -55,9 +55,8 @@ public class Main {
         for (int i = 0; i < allArr.length; i++) {
             printSum(allArr[i]);
         }
-
     }
-
+    
     private static void printSum(String[][] arr) {
         try {
             ArrayProcess.calculateElementSum(arr);
