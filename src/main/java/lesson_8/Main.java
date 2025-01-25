@@ -17,21 +17,21 @@ public class Main {
                 "Стол", "Школа", "Тетрадь", "Дерево", "Школа",
                 "Карандаш", "Анна", "Телефон", "Василий", "Ручка"
         };
-        Map<String, Integer> counterBook = new HashMap<>();
+        Map<String, Integer> wordsCounter = new HashMap<>();
 
         for (int i = 0; i < wordsArray.length; i++) {
-            counterBook.put(wordsArray[i], counterBook.getOrDefault(wordsArray[i], 0) + 1);
+            wordsCounter.put(wordsArray[i], wordsCounter.getOrDefault(wordsArray[i], 0) + 1);
         }
 
         System.out.println("Список уникальных значений:");
-        for (Map.Entry<String, Integer> entry : counterBook.entrySet()) {
+        for (Map.Entry<String, Integer> entry : wordsCounter.entrySet()) {
             if (entry.getValue() == 1) {
                 System.out.println(entry.getKey());
             }
         }
         System.out.println();
         System.out.println("Количество повторений каждого значения:");
-        for (Map.Entry<String, Integer> entry : counterBook.entrySet()) {
+        for (Map.Entry<String, Integer> entry : wordsCounter.entrySet()) {
             System.out.println("Значение <" + entry.getKey() + "> повторяется -> " + entry.getValue() + " раз");
         }
         System.out.println();
