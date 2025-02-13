@@ -1,4 +1,4 @@
-package Lesson_13_junit_5;
+package lesson_13_junit_5;
 
 import java.math.BigInteger;
 
