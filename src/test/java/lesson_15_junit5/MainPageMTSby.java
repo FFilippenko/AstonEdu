@@ -35,10 +35,9 @@ public class MainPageMTSby {
         driver.get("https://www.mts.by/");
 
         try {
-            WebDriverWait cookieWait = new WebDriverWait(driver, Duration.ofSeconds(5));
-            WebElement closeButton = cookieWait.until(ExpectedConditions.elementToBeClickable(closeCookieButtonLoc));
+            WebElement closeButton = driver.findElement(closeCookieButtonLoc);
             closeButton.click();
-        } catch (TimeoutException e) {
+        } catch (Exception e) {
             System.out.println("Кнопка куки не прогрузилась или не активна");
         }
     }
