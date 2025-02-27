@@ -18,11 +18,11 @@ public class MainPageMTSby {
     private WebDriverWait wait;
 
     private By closeCookieButtonLoc = By.xpath("//*[@id=\"cookie-agree\"]");
-    private By dropDownRawLoc = By.xpath("//*[@id=\"pay-section\"]/div/div/div[2]/section/div/div[1]/div[1]/div[2]/button");
-    private By communicationServiceOptionLoc = By.xpath("//*[@id=\"pay-section\"]/div/div/div[2]/section/div/div[1]/div[1]/div[2]/ul/li[1]/p");
-    private By internetOptionLoc = By.xpath("//*[@id=\"pay-section\"]/div/div/div[2]/section/div/div[1]/div[1]/div[2]/ul/li[2]/p");
-    private By installmentOptionLoc = By.xpath("//*[@id=\"pay-section\"]/div/div/div[2]/section/div/div[1]/div[1]/div[2]/ul/li[3]/p");
-    private By arrearsOptionLoc = By.xpath("//*[@id=\"pay-section\"]/div/div/div[2]/section/div/div[1]/div[1]/div[2]/ul/li[4]/p");
+    private By dropDownRawLoc = By.xpath("//button[@class='select__header']");
+    private By communicationServiceOptionLoc = By.xpath("//*[@id=\"pay-section\"]/descendant::p[contains(text(),'Услуги связи')]");
+    private By internetOptionLoc = By.xpath("//*[@id=\"pay-section\"]/descendant::p[contains(text(),'Домашний интернет')]");
+    private By installmentOptionLoc = By.xpath("//*[@id=\"pay-section\"]/descendant::p[contains(text(),'Рассрочка')]");
+    private By arrearsOptionLoc = By.xpath("//*[@id=\"pay-section\"]/descendant::p[contains(text(),'Задолженность')]");
     private By fieldCommunicationServicePhoneNumberLoc = By.xpath("//*[@id=\"connection-phone\"]");
     private By fieldCommunicationServiceAmountLoc = By.xpath("//*[@id=\"connection-sum\"]");
     private By fieldCommunicationServiceEmailLoc = By.xpath("//*[@id=\"connection-email\"]");
@@ -112,54 +112,6 @@ public class MainPageMTSby {
     public String getAttributePlaceHolder(By fieldLoc) {
         WebElement field = wait.until(ExpectedConditions.visibilityOfElementLocated(fieldLoc));
         return field.getAttribute("placeholder");
-    }
-
-    public By getFieldCommunicationServicePhoneNumberLoc() {
-        return fieldCommunicationServicePhoneNumberLoc;
-    }
-
-    public By getFieldCommunicationServiceAmountLoc() {
-        return fieldCommunicationServiceAmountLoc;
-    }
-
-    public By getFieldCommunicationServiceEmailLoc() {
-        return fieldCommunicationServiceEmailLoc;
-    }
-
-    public By getFieldInternetNumberLoc() {
-        return fieldInternetNumberLoc;
-    }
-
-    public By getFieldInternetAmountLoc() {
-        return fieldInternetAmountLoc;
-    }
-
-    public By getFieldInternetEmailLoc() {
-        return fieldInternetEmailLoc;
-    }
-
-    public By getFieldInstallmentAccountNumberLoc() {
-        return fieldInstallmentAccountNumberLoc;
-    }
-
-    public By getFieldInstallmentAmountLoc() {
-        return fieldInstallmentAmountLoc;
-    }
-
-    public By getFieldInstallmentEmailLoc() {
-        return fieldInstallmentEmailLoc;
-    }
-
-    public By getFieldArrearsAccountNumberLoc() {
-        return fieldArrearsAccountNumberLoc;
-    }
-
-    public By getFieldArrearsAmountLoc() {
-        return fieldArrearsAmountLoc;
-    }
-
-    public By getFieldArrearsEmailLoc() {
-        return fieldArrearsEmailLoc;
     }
 
     public String getCommunicationServicePhoneNumberPlaceHolder() {

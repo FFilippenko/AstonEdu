@@ -14,15 +14,15 @@ public class IframeCheckoutPage {
     private WebDriverWait wait;
 
     private By checkoutIframeLoc = By.xpath("//iframe[contains(@src, 'checkout.bepaid.by')]");
-    private By amountTitleLoc = By.xpath("/html/body/app-root/div/div/div/app-payment-container/section/div/div/div[1]/span[1]");
-    private By serviceSummary = By.xpath("/html/body/app-root/div/div/div/app-payment-container/section/div/div/div[2]/span");
-    private By checkoutPaymentLogosLoc = By.xpath("/html/body/app-root/div/div/div/app-payment-container/section/div/app-card-page/div/div[1]/app-card-input/form/div[1]/div[1]/app-input/div/div/div[2]/div/div/img");
-    private By checkoutPaymentRandomLogos = By.xpath("/html/body/app-root/div/div/div/app-payment-container/section/div/app-card-page/div/div[1]/app-card-input/form/div[1]/div[1]/app-input/div/div/div[2]/div/div/div/img");
-    private By submitButtonLoc = By.xpath("/html/body/app-root/div/div/div/app-payment-container/section/div/app-card-page/div/div[1]/button");
-    private By cardNumberFieldLoc = By.xpath("/html/body/app-root/div/div/div/app-payment-container/section/div/app-card-page/div/div[1]/app-card-input/form/div[1]/div[1]/app-input/div/div/div[1]");
-    private By expirationDateFieldLoc = By.xpath("/html/body/app-root/div/div/div/app-payment-container/section/div/app-card-page/div/div[1]/app-card-input/form/div[1]/div[2]/div[1]/app-input/div/div/div[1]");
-    private By cvcFieldLoc = By.xpath("/html/body/app-root/div/div/div/app-payment-container/section/div/app-card-page/div/div[1]/app-card-input/form/div[1]/div[2]/div[3]/app-input/div/div/div[1]");
-    private By cardHolderFieldLoc = By.xpath("/html/body/app-root/div/div/div/app-payment-container/section/div/app-card-page/div/div[1]/app-card-input/form/div[1]/div[3]/app-input/div/div/div[1]");
+    private By amountTitleLoc = By.xpath("//div[@class='pay-description__cost']/child::span[contains(text(),'BYN')]");
+    private By serviceSummary = By.xpath("//div[@class='pay-description__text']/child::span[contains(text(),'Оплата') and contains(text(),'Номер')]");
+    private By checkoutPaymentLogosLoc = By.xpath("//div[contains(@class, 'cards-brands__container')]/child::img");
+    private By checkoutPaymentRandomLogos = By.xpath("//div[contains(@class, 'cards-brands_random')]/child::img");
+    private By submitButtonLoc = By.xpath("//descendant::button[@type='submit' and contains(text(),'Оплатить')]");
+    private By cardNumberFieldLoc = By.xpath("//*[@id='cc-number']/following-sibling::label");
+    private By expirationDateFieldLoc = By.xpath("//*[@formcontrolname='expirationDate']/following-sibling::label");
+    private By cvcFieldLoc = By.xpath("//*[@formcontrolname='cvc']/following-sibling::label");
+    private By cardHolderFieldLoc = By.xpath("//*[@formcontrolname='holder']/following-sibling::label");
 
     public IframeCheckoutPage(WebDriver driver) {
         this.driver = driver;
